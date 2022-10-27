@@ -1,12 +1,31 @@
 #include <stdio.h>
 #include <SDL.h>
 #include <SDL_image.h>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+extern "C"
+{
+#include "lua.h"
+#include "lauxlib.h"
+#include "lualib.h"
+}
 
 #define HEIGHT 600
 #define WIDTH 600
 
 int main(int argc, char* argv[])
 {
+    lua_State *L = luaL_newstate();
+    luaL_openlibs(L);
+
+    luaL_loadfile(L, "hello.lua");
+    if (lua_pcall(L, 0, 0, 0)) {
+        cout << lua_tostring(L, -1) << endl;
+    }
+
 
     // returns zero on success else non-zero
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
@@ -28,7 +47,7 @@ int main(int argc, char* argv[])
     SDL_Surface* surface;
 
     // please provide a path for your image
-    surface = IMG_Load("rika.jpg");
+    surface = IMG_Load("imgs/rika.jpg");
 
     // loads image to our graphics hardware memory.
     SDL_Texture* tex = SDL_CreateTextureFromSurface(rend, surface);
@@ -56,8 +75,8 @@ int main(int argc, char* argv[])
     // controls animation loop
     int close = 0;
 
-    // speed of box
-    int speed = 300;
+    int vx = 30, vy = 30;
+
 
     // animation loop
     while (!close) {
@@ -78,22 +97,7 @@ int main(int argc, char* argv[])
                 case SDL_SCANCODE_Q:
                     close = 1;
                     break;
-                case SDL_SCANCODE_W:
-                case SDL_SCANCODE_UP:
-                    dest.y -= speed / 30;
-                    break;
-                case SDL_SCANCODE_A:
-                case SDL_SCANCODE_LEFT:
-                    dest.x -= speed / 30;
-                    break;
-                case SDL_SCANCODE_S:
-                case SDL_SCANCODE_DOWN:
-                    dest.y += speed / 30;
-                    break;
-                case SDL_SCANCODE_D:
-                case SDL_SCANCODE_RIGHT:
-                    dest.x += speed / 30;
-                    break;
+
                 default:
                     break;
                 }
@@ -101,20 +105,36 @@ int main(int argc, char* argv[])
         }
 
         // right boundary
-        if (dest.x + dest.w > 1000)
-            dest.x = 1000 - dest.w;
+        if (dest.x + dest.w > WIDTH)
+        {
+            dest.x = WIDTH - dest.w;
+            vx = -vx;
+        }
+            
 
         // left boundary
         if (dest.x < 0)
+        {
             dest.x = 0;
+            vx = -vx;
+        }
 
         // bottom boundary
-        if (dest.y + dest.h > 1000)
-            dest.y = 1000 - dest.h;
+        if (dest.y + dest.h > HEIGHT)
+        {
+            dest.y = HEIGHT - dest.h;
+            vy = -vy;
+        }
 
         // upper boundary
         if (dest.y < 0)
+        {
             dest.y = 0;
+            vy = -vy;
+        }
+
+        dest.x += vx;
+        dest.y += vy;
 
         // clears the screen
         SDL_RenderClear(rend);
