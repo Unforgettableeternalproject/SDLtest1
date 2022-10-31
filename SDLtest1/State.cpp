@@ -8,7 +8,7 @@ State::State(const char* lua_state_file)
 
 	int error = luaL_dofile(this->L, lua_state_file);
 	if (error) {
-		std::cout << "LUA::ERROR::STATE::CONSTRUCTOR" << lua_tostring(this->L, -1) << '\n';
+		std::cout << "LUA::ERROR::STATE::CONSTRUCTOR::" << lua_tostring(this->L, -1) << '\n';
 		lua_pop(this->L, lua_gettop(this->L));
 		throw("CPP:;ERROR::STATE::Could not open file %s", lua_state_file);
 	}

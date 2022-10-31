@@ -153,6 +153,7 @@
   <ItemGroup>
     <None Include="Entity.lua" />
     <None Include="Game_State_Lua.lua" />
+    <None Include="Player.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
