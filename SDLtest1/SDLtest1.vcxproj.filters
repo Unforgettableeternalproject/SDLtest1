@@ -13,10 +13,47 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Lua">
+      <UniqueIdentifier>{d14c76eb-783e-434f-b735-ed5846b6b72e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua\LuaStates">
+      <UniqueIdentifier>{9b14edca-a6cd-4cde-95e6-1aed6dc05ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lua\Entity">
+      <UniqueIdentifier>{8ce15190-6b88-4364-8c18-a06bc900f6ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game_State_Lua.lua">
+      <Filter>Lua\LuaStates</Filter>
+    </None>
+    <None Include="Entity.lua">
+      <Filter>Lua\Entity</Filter>
+    </None>
   </ItemGroup>
 </Project>
