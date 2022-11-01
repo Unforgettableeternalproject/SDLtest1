@@ -8,5 +8,6 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <lua.hpp>
+#include <luajit.h>	
 
 #endif // STDAFX.H

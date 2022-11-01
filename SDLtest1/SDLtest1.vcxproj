@@ -104,15 +104,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\include;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\include;C:\Users\user\Documents\libraries\lua54_static\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\include;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\include;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\lib\x64;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\lib\x64;C:\Users\user\Documents\libraries\lua54_static\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\lib\x64;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\lib\x64;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;luajit.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,7 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\include;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\include;C:\Users\user\Documents\libraries\lua54_static\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\include;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\include;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -132,8 +132,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\lib\x64;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\lib\x64;C:\Users\user\Documents\libraries\lua54_static\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\lib\x64;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\lib\x64;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;luajit.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
