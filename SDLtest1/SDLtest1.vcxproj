@@ -104,14 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\include;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\include;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\External\SDL2-2.24.2\include;$(SolutionDir)\External\SDL2_image-2.6.2\include;$(SolutionDir)\External\LuaJIT-2.0.5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\user\Documents\libraries\SDL2-2.24.1\lib\x64;C:\Users\user\Documents\libraries\SDL2_image-2.6.2\lib\x64;C:\Users\user\Documents\libraries\LuaJIT-2.0.5\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\External\SDL2-2.24.2\lib\x64;$(SolutionDir)\External\SDL2_image-2.6.2\lib\x64;$(SolutionDir)\External\LuaJIT-2.0.5\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;luajit.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
